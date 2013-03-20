@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-nothing special to set.
+This gem does not provide automatic agent start and dispatcher discovery, to make sure your rake tasks are properly monitored, prefix them with `NEWRELIC_DISPATCHER=rake` environment variable.
+
+```
+NEWRELIC_DISPATCHER=rake rake foo:bar:baz
+```
 
 ## Authors and Contributors
 
