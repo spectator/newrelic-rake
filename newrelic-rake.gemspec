@@ -13,6 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = ""
 
   gem.add_dependency 'newrelic_rpm',         '>= 3.1.0'
+  gem.add_dependency 'rake'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

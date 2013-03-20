@@ -16,8 +16,8 @@ DependencyDetection.defer do
       include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
 
       alias_method :origin_execute, :execute
+
       def execute(args=nil)
-        NewRelic::Agent.manual_start(:dispatcher => :rake)
         perform_action_with_newrelic_trace(:name => self.name, :category => "OtherTransaction/Rake") do
           origin_execute(args)
         end
